@@ -1,0 +1,13 @@
+import React from 'react';
+import { List, Datagrid, TextField } from 'react-admin'; // eslint-disable-line import/no-unresolved
+import {{properCase name}}Title from './{{properCase name}}Title';
+
+export const {{properCase name}}List = (props) => (
+<List title={<{{properCase name}}Title />} {...props}>
+   <Datagrid>
+      <TextField source="id" />
+   </Datagrid>
+</List>
+);
+
+export default {{properCase name}}List

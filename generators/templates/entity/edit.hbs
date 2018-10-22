@@ -1,0 +1,15 @@
+import React from 'react';
+import { Edit, SimpleForm, TextField, TextInput, required } from 'react-admin'; // eslint-disable-line import/no-unresolved
+import {{properCase name}}Title from './{{properCase name}}Title';
+
+export const {{properCase name}}Edit = (props) => (
+<Edit title={<{{properCase name}}Title />} {...props}>
+   <SimpleForm>
+      <TextField source="id" />
+      <TextInput source="name" validate={[required()]} />
+   </SimpleForm>
+</Edit>
+);
+
+
+export default {{properCase name}}Edit;

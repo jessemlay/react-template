@@ -1,0 +1,14 @@
+import React from 'react';
+import { Show, SimpleShowLayout, TextField } from 'react-admin'; // eslint-disable-line import/no-unresolved
+import {{properCase name}}Title from './{{properCase name}}Title';
+
+const {{properCase name}}Show = props => (
+<Show title={<{{properCase name}}Title />} {...props}>
+   <SimpleShowLayout>
+      <TextField source="id" />
+      <TextField source="name" />
+   </SimpleShowLayout>
+</Show>
+);
+
+export default {{properCase name}}Show;

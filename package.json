@@ -1,0 +1,87 @@
+{
+   "name": "versasuite-template",
+   "homepage": "http://localhost",
+   "displayName": "template",
+   "version": "0.1.0",
+   "private": false,
+   "dependencies": {
+      "@material-ui/core": "~1.4.0",
+      "@material-ui/icons": "~1.1.0",
+      "dateformat": "^3.0.3",
+      "prettier": "1.14.3",
+      "prop-types": "^15.6.2",
+      "ra-data-fakerest": "^2.3.0",
+      "ra-data-json-server": "^2.3.2",
+      "ra-input-rich-text": "^2.3.2",
+      "ra-language-english": "^2.3.0",
+      "ra-language-spanish": "^1.0.0",
+      "react": "^16.5.2",
+      "react-admin": "^2.3.2",
+      "react-dom": "^16.5.2",
+      "react-redux": "~5.0.7",
+      "react-router-dom": "~4.2.2",
+      "react-scripts": "1.1.5",
+      "recompose": "~0.26.0",
+      "redux-form": "~7.4.0",
+      "redux-saga": "~0.16.0",
+      "styled-components": "^3.4.9",
+      "versa-clock": "^0.1.0"
+   },
+   "devDependencies": {
+      "@storybook/addon-actions": "^3.4.11",
+      "@storybook/addon-links": "^3.4.11",
+      "@storybook/addons": "^3.4.11",
+      "@storybook/react": "^3.4.11",
+      "babel-core": "^6.26.3",
+      "babel-runtime": "^6.26.0",
+      "chalk": "^2.4.1",
+      "enzyme": "^3.6.0",
+      "enzyme-adapter-react-16": "^1.5.0",
+      "eslint-plugin-prettier": "^2.6.2",
+      "faker": "^4.1.0",
+      "flow-bin": "^0.81.0",
+      "husky": "^1.0.0-rc.15",
+      "json-server": "^0.14.0",
+      "lint-staged": "^7.3.0",
+      "ngrok": "^3.0.1",
+      "plop": "^2.1.0",
+      "react-test-renderer": "^16.5.2",
+      "storybook": "^1.0.0",
+      "webpack-bundle-analyzer": "^3.0.2"
+   },
+   "scripts": {
+      "prettify": "prettier --write",
+      "prettify:all": "prettier --write src/**/*.{js,jsx,json,css,md}",
+      "generate": "plop",
+      "start:tunnel": "ngrok http 3000 -host-header='localhost:3000'",
+      "storybook": "start-storybook -p 9009 -s public",
+      "build-storybook": "build-storybook -s public",
+      "analyze": "node bundle.js",
+      "start:mock": "cd ./mockServer && npm run start:nodemon",
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "test:coverage": "npm test -- --coverage",
+      "eject": "react-scripts eject"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "lint-staged"
+      }
+   },
+   "lint-staged": {
+      "src/**/*.{js,jsx,json,css,md}": [
+         "npm run prettify:all",
+         "git add"
+      ]
+   },
+   "eslintConfig": {
+      "extends": "react-app",
+      "plugins": [
+         "prettier"
+      ],
+      "rules": {
+         "prettier/prettier": "error"
+      }
+   }
+}

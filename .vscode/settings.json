@@ -1,0 +1,16 @@
+{
+   "editor.formatOnSave": true,
+   "javascript.format.enable": false,
+   "javascript.validate.enable": false,
+   "prettier.eslintIntegration": true,
+   "eslint.options": {
+      "experimentalDecorators": true
+   },
+   "javascript.implicitProjectConfig.experimentalDecorators": true,
+   "explorer.confirmDragAndDrop": false,
+   "files.autoSave": "afterDelay",
+   "eslint.alwaysShowStatus": true,
+   "eslint.autoFixOnSave": false,
+"team.showWelcomeMessage": false,
+"npm-scripts.showStartNotification": false
+}

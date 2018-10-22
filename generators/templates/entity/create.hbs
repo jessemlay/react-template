@@ -1,0 +1,21 @@
+import React from 'react';
+import {
+   Create,
+   minLength,
+   SimpleForm,
+   TextInput,
+   DateInput
+} from 'react-admin';
+import {{properCase name}}Title from './{{properCase name}}Title';
+
+const defaultValue = { created_at: new Date() };
+const {{properCase name}}Create = props => (
+<Create title={<{{properCase name}}Title />} {...props}>
+   <SimpleForm redirect={false} defaultValue={defaultValue}>
+      <TextInput source="dataSource" validate={minLength(10)} fullWidth />
+      <DateInput source="created_at" />
+   </SimpleForm>
+</Create>
+);
+
+export default {{properCase name}}Create;
