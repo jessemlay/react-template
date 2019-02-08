@@ -1,4 +1,4 @@
-VersaWeb template
+React Admin template
 
 # Update proxy
 
